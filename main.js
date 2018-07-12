@@ -31,4 +31,20 @@ $( document ).ready(function() {
 
 		});
 	});
+
+//Background trigger
+	$('.background-trigger').hover(function() {
+		$(this).css('background-color', '#1E90FF');
+	},function() {
+		$(this).css('background-color', 'white');
+	});
+	$('.background-trigger').click(function(){
+		if ($(this).text() == 'O') {
+			$(this).text('X');
+			$('body').css('background-image', 'url(http://kb.vbrqx.com/dev/img/slideshow/light/01.jpg)');
+		} else {
+			$(this).text('O');
+			$('body').css('background-image', '')
+		}
+	})
 });
