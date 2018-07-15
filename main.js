@@ -1,4 +1,4 @@
-//main.js v.0.0.1 for KB staging (12.07.18)
+//main.js v.0.0.2 for KB staging (12.07.18)
 $( document ).ready(function() {
 //Toggling Sections
 	$('.card-header').hover(function(){
