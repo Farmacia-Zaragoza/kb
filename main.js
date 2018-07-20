@@ -1,4 +1,4 @@
-//main.js v.0.0.2 for KB staging (12.07.18)
+//main.js v.0.0.3 for KB staging (20.07.18)
 $( document ).ready(function() {
 //Toggling Sections
 	$('.card-header').hover(function(){
@@ -33,7 +33,7 @@ $( document ).ready(function() {
 	});
 
 //Background trigger
-	$('.background-trigger').hover(function() {
+	/*$('.background-trigger').hover(function() {
 		$(this).css('background-color', '#1E90FF');
 	},function() {
 		$(this).css('background-color', 'white');
@@ -46,5 +46,23 @@ $( document ).ready(function() {
 			$(this).text('O');
 			$('body').css('background-image', '')
 		}
-	})
+	})*/
+
+//Background carousel
+var imgsString = $('.background-holder').attr('imgs');
+var imgsArr = imgsString.split(',').map(function(img) {
+	return `url("${img}")`;
+  });
+console.log(imgsArr)
+$('.background-holder').css('background', imgsArr[0]);
+function changeBackground(arr, element){
+	var currBg = $(element).css('background-image');
+	var currIndex = arr.indexOf(currBg);
+	if (currIndex>-1) {
+		if (currIndex == arr.length-1) {currIndex = -1;}
+		$(element).css('background', imgsArr[currIndex+1])
+	}
+}
+setInterval(changeBackground, 2000, imgsArr, $('.background-holder'));
+
 });
