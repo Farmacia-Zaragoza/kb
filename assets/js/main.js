@@ -33,20 +33,16 @@ $( document ).ready(function() {
 	});
 
 //Background trigger
-	/*$('.background-trigger').hover(function() {
-		$(this).css('background-color', '#1E90FF');
-	},function() {
-		$(this).css('background-color', 'white');
-	});
 	$('.background-trigger').click(function(){
-		if ($(this).text() == 'O') {
+		if (!timer) {
 			$(this).text('X');
-			$('body').css('background-image', 'url(http://kb.vbrqx.com/dev/img/slideshow/light/01.jpg)');
+			timer = setInterval(changeBackground, 2000, imgsArr, $('.background-holder'));
 		} else {
 			$(this).text('O');
-			$('body').css('background-image', '')
+			clearInterval(timer);
+			timer = false;
 		}
-	})*/
+	})
 
 //Background carousel
 var imgsString = $('.background-holder').attr('imgs');
@@ -63,6 +59,7 @@ function changeBackground(arr, element){
 		$(element).css('background', imgsArr[currIndex+1])
 	}
 }
-setInterval(changeBackground, 2000, imgsArr, $('.background-holder'));
+var timer = setInterval(changeBackground, 2000, imgsArr, $('.background-holder'));
+console.log
 
 });

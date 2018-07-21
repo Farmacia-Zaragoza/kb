@@ -1,6 +1,7 @@
 /*style.css v.0.0.3 for KB staging (20.07.18)*/
 body{
 	 font-family: "Courier New", Courier, monospace!important;
+	 background-color: gray;
 	}
 .navbar{
 	margin-top: 5px;
@@ -47,7 +48,6 @@ body{
 	cursor: pointer;
 	background-color: white;
 	text-align: center;
-	display: none;
 }
 .background-holder {
 	position: absolute;
@@ -56,7 +56,10 @@ body{
 	top: 0;
 	left: 0;
 	z-index: -1;
-	transition: background 1s;
+	transition: background 3s;
+	background-position: center!important;
+	background-size: cover!important;
+	opacity: 0.3;
 }
 .container {
 	background: transparent;
