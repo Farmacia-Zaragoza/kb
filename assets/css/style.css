@@ -1,16 +1,32 @@
 /*style.css v.0.0.3 for KB staging (20.07.18)*/
-body{
+body {
 	 font-family: "Courier New", Courier, monospace!important;
 	 background-color: gray;
+	 font-size: 1.5vw!important;
 	}
-.navbar{
+.btn {
+	font-size: 1.5vw!important;
+}
+a {
+	font-size: 1.5vw!important;
+}
+.navbar {
 	margin-top: 5px;
 	margin-bottom: 25px;
+	font-size: 1.5vw!important;
 }
-.status{
-	margin-right: 10px;
-	text-align: center;
-	margin-bottom: 15px;
+.status { 
+	width: 1920px;
+	position: relative;
+	left: 15px;
+}
+.status-container {
+	overflow: hidden;
+	width: 90%;
+	float: left;
+}
+.status-button {
+	float: left;
 }
 .dropdown-toggle::after {
 	display: none;
@@ -19,7 +35,7 @@ body{
 	margin-bottom: 20px;
 }
 .nav-link:hover{
-	color: gray!important;
+	color: #40E0D0!important;
 }
 #accordion{
 	margin-top: 20px;
@@ -39,9 +55,9 @@ body{
 }
 .background-trigger {
 	border: 2px solid #1E90FF;
-	border-radius: 20px;
-	width: 20px;
-	height: 20px;
+	border-radius: 30px;
+	width: 30px;
+	height: 30px;
 	position: absolute;
 	right: 40px;
 	top: 20px;
@@ -59,7 +75,7 @@ body{
 	transition: background 3s;
 	background-position: center!important;
 	background-size: cover!important;
-	opacity: 0.3;
+	opacity: 0.1;
 }
 .container {
 	background: transparent;

@@ -60,6 +60,20 @@ function changeBackground(arr, element){
 	}
 }
 var timer = setInterval(changeBackground, 2000, imgsArr, $('.background-holder'));
-console.log
+
+//Status buttons left/right
+var $moveLeft = $('.status-left-button');
+var $moveRight = $('.status-right-button');
+var $movingElement = $('.status'); 
+
+$moveLeft.click(function(){
+	var position = +$movingElement.css('left').replace('px', '')-15;
+	$movingElement.css('left', `${position}px`)
+});
+$moveRight.click(function(){
+	var position = +$movingElement.css('left').replace('px', '')+15;
+	$movingElement.css('left', `${position}px`)
+});
+
 
 });
